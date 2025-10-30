@@ -12,7 +12,7 @@ function UserDetails() {
         `https://jsonplaceholder.typicode.com/users/${id}`
       );
       const data = await response.json();
-      setUser(data);
+      setTimeout(() => setUser(data), 500); // Simulate network delay
     }
 
     fetchUser();
